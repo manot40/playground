@@ -5,6 +5,10 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
+/**
+ * @NIM 2201860355
+ * @author Kevin Sandiho
+ */
 public class SimpleJDBC {
     static class ConnectDB{
         private static Connection sqlConnect;
