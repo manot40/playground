@@ -32,7 +32,7 @@ public class SimpleJDBC {
         try {
             final String os = System.getProperty("os.name");
             if (os.contains("Windows")){
-                Runtime.getRuntime().exec("cls");
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else {
                 Runtime.getRuntime().exec("clear");
             }
@@ -84,9 +84,9 @@ public class SimpleJDBC {
                 case 1:
                     System.out.println("Masukan detail data baru");
                     System.out.println("Title: ");
-                    title = input.next();
+                    title = input.nextLine();
                     System.out.println("Author: ");
-                    author = input.next();
+                    author = input.nextLine();
                     System.out.println("Price: ");
                     price = input.nextFloat();
                     System.out.println("Qty: ");
@@ -109,9 +109,9 @@ public class SimpleJDBC {
                     id = input.nextInt();
                     System.out.println("\nMasukan detail perubahan");
                     System.out.println("Title: ");
-                    title = input.next();
+                    title = input.nextLine();
                     System.out.println("Author: ");
-                    author = input.next();
+                    author = input.nextLine();
                     System.out.println("Price: ");
                     price = input.nextFloat();
                     System.out.println("Qty: ");
