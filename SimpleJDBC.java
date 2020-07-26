@@ -97,6 +97,7 @@ public class SimpleJDBC {
                         Statement stt=conn.createStatement();
                         stt.executeQuery("INSERT INTO books(title,author,price,qty) VALUES('"+title+"','"+author+"','"+price+"','"+qty+"')");
                         System.out.println("TAMBAH DATA BERHASIL!");
+                        Thread.sleep(1000);
                     } catch(SQLException ex) {
                         System.out.println("Tidak dapat terhubung ke DBMS, error message:");
                         System.err.println(ex.getMessage());
@@ -123,6 +124,7 @@ public class SimpleJDBC {
                         Statement stt=conn.createStatement();
                         stt.executeQuery("UPDATE books SET title='"+title+"',author='"+author+"',price='"+price+"',qty='"+qty+"' WHERE id='"+id+"'");
                         System.out.println("UPDATE BERHASIL!");
+                        Thread.sleep(1000);
                     } catch(SQLException ex) {
                         System.out.println("Tidak dapat terhubung ke DBMS, error message:");
                         System.err.println(ex.getMessage());
@@ -139,6 +141,7 @@ public class SimpleJDBC {
                         Statement stt=conn.createStatement();
                         stt.executeQuery("DELETE FROM books WHERE id='"+id+"'");
                         System.out.println("HAPUS DATA BERHASIL!");
+                        Thread.sleep(1000);
                     } catch(SQLException ex) {
                         System.out.println("Tidak dapat terhubung ke DBMS, error message:");
                         System.err.println(ex.getMessage());
@@ -152,6 +155,7 @@ public class SimpleJDBC {
                 
                 default:
                     System.out.println("Pilihan Invalid!");
+                    Thread.sleep(1000);
                     clearConsole();
                     break;
             }
