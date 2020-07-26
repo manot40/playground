@@ -20,10 +20,9 @@ CREATE TABLE IF NOT EXISTS `books` (
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-DELETE FROM `books`
 INSERT INTO `books` (`ID`, `title`, `author`, `price`, `qty`) VALUES
 	(1001, 'Java for Dummies', 'Tan Ah Teck', 11.11, 11),
 	(1002, 'More Java for dummies', 'Teh Ah Teck', 22.22, 22),
-	(1003, 'More Java for more Dummies', 'Mohammad Ali', 33.33, 33);
-	(1004, 'A Cup of Java', 'Mohammad Ali', 44.44, 44);
-	(1005, 'A Teaspoon of Java', 'Mohammad Ali', 55.55, 55);
+	(1003, 'More Java for more Dummies', 'Mohammad Ali', 33.33, 33),
+	(1004, 'A Cup of Java', 'Kumar', 44.44, 44),
+	(1005, 'A Teaspoon of Java', 'Kevin Jones', 55.55, 55);
