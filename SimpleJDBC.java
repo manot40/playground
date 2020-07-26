@@ -83,13 +83,13 @@ public class SimpleJDBC {
             switch(pilihan){
                 case 1:
                     System.out.println("Masukan detail data baru");
-                    System.out.println("Title: ");
+                    System.out.print("Title: ");
                     title = input.nextLine();
-                    System.out.println("Author: ");
+                    System.out.print("Author: ");
                     author = input.nextLine();
-                    System.out.println("Price: ");
+                    System.out.print("Price: ");
                     price = input.nextFloat();
-                    System.out.println("Qty: ");
+                    System.out.print("Qty: ");
                     qty = input.nextInt();
                     
                     try{
@@ -105,16 +105,17 @@ public class SimpleJDBC {
                     break;
                 
                 case 2:
-                    System.out.println("Masukan id data yang akan diubah: ");
-                    id = input.nextInt();
+                    System.out.print("Masukan id data yang akan diubah: ");
+                    input.nextLine();
+                    id = Integer.parseInt(input.nextLine());
                     System.out.println("\nMasukan detail perubahan");
-                    System.out.println("Title: ");
+                    System.out.print("Title: ");
                     title = input.nextLine();
-                    System.out.println("Author: ");
+                    System.out.print("Author: ");
                     author = input.nextLine();
-                    System.out.println("Price: ");
+                    System.out.print("Price: ");
                     price = input.nextFloat();
-                    System.out.println("Qty: ");
+                    System.out.print("Qty: ");
                     qty = input.nextInt();
                     
                     try{
@@ -130,7 +131,7 @@ public class SimpleJDBC {
                     break;
                     
                 case 3:
-                    System.out.println("Masukan id data yang akan dihapus: ");
+                    System.out.print("Masukan id data yang akan dihapus: ");
                     id = input.nextInt();
                     
                     try{
